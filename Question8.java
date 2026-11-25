@@ -22,7 +22,7 @@ public class Question8 {
         Node head = null;
         Node tail = null;
 
-        // Create linked list
+        
         for (int i = 0; i < n; i++) {
 
             int value = sc.nextInt();
@@ -39,12 +39,12 @@ public class Question8 {
 
         int x = sc.nextInt();
 
-        // Delete occurrences from head
+        
         while (head != null && head.val == x) {
             head = head.next;
         }
 
-        // Delete occurrences from remaining list
+        
         Node temp = head;
 
         while (temp != null && temp.next != null) {
@@ -55,17 +55,14 @@ public class Question8 {
                 temp = temp.next;
             }
         }
-
-        // Display linked list
+        
         if (head == null) {
             System.out.println("Empty");
         } else {
-
             temp = head;
 
             while (temp != null) {
                 System.out.print(temp.val);
-
                 if (temp.next != null) {
                     System.out.print(" ");
                 }
@@ -74,6 +71,6 @@ public class Question8 {
             }
         }
 
-        sc.close();
+        
     }
 }
